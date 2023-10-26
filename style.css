@@ -1,0 +1,227 @@
+/* CSS for desktop devices -------------------------------------------------- */
+@media only screen and (min-width: 750px) {
+  #map {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  h2 {
+    line-height: 0vh;
+    font-size: 2vh;
+  }
+
+  p {
+    margin: 0px;
+    line-height: 3vh;
+    font-size: 1.5vh;
+  }
+
+  /* Styling for popup */
+  .popup {
+
+    margin-top: 1vh;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 1.4vh;
+    opacity: 1;
+  }
+
+  /* Styling for popup links */
+  .popup a:link,
+  .popup a:visited,
+  .popup a:active {
+    text-decoration: none;
+  }
+
+  .popup a:hover {
+    text-decoration: underline;
+  }
+
+  /* Styling for autocomplete search bar */
+  #pac-card {
+    background-color: #fff;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-family: Roboto;
+    margin: 1.5vh 1.5vw 0 0;
+    -moz-box-sizing: border-box;
+    outline: none;
+  }
+
+  #pac-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 12px;
+  }
+
+  #pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 1.5vh;
+    font-weight: 400;
+    margin-left: 0.8vw;
+    padding: 0.5vh 5vw 0.5vh 0.5vw;
+    text-overflow: ellipsis;
+    width: 400px;
+  }
+
+  #pac-input:focus {
+    border-color: #4d90fe;
+  }
+
+  #title {
+    color: #fff;
+    background-color: #1f3161;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 6px 12px;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+/* CSS for mobile devices in portrait view ---------------------------------- */
+@media only screen and (max-width: 750px) and (orientation: portrait) {
+  #map {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  h2 {
+    line-height: 0vh;
+    font-size: 3vh;
+  }
+
+  p {
+    margin: 0px;
+    line-height: 5vh;
+    font-size: 2.3vh;
+  }
+
+  /* Styling for popup */
+  .popup {
+    line-height: 2.6vh;
+    margin-top: 1vh;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 2vh;
+    font-weight: 300;
+  }
+
+  /* Styling for autocomplete search bar */
+  #pac-card {
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: Roboto;
+    margin: 0 0 0 0;
+    -moz-box-sizing: border-box;
+    outline: none;
+    width: 100%;
+  }
+  #pac-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 12px;
+  }
+  #pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 2.7vh;
+    font-weight: 300;
+    margin-left: 2vw;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+  #pac-input:focus {
+    border-color: #4d90fe;
+  }
+  #title {
+    color: #fff;
+    background-color: #1f3161;
+    font-size: 3vh;
+    font-weight: 400;
+    padding: 6px 12px;
+  }
+  .hidden {
+    display: none;
+  }
+}
+/* CSS for mobile devices in landscape view ------------------------------- */
+@media only screen and (max-width: 750px) and (orientation: landscape) {
+  #map {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  h2 {
+    line-height: 3vh;
+    font-size: 5vh;
+  }
+
+  p {
+    margin: 0px;
+    line-height: 6vh;
+    font-size: 4.5vh;
+  }
+
+  /* Styling for popup */
+  .popup {
+    line-height: 4.5vh;
+    margin-top: 1vh;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 4vh;
+    font-weight: 300;
+  }
+
+  /* Styling for autocomplete search bar */
+  #pac-card {
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: Roboto;
+    -moz-box-sizing: border-box;
+    outline: none;
+    width: 50%;
+  }
+  #pac-container {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  #pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 4vh;
+    font-weight: 300;
+    margin-left: 1vw;
+    padding: 1vh 1vw 1vh 1vw;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+
+  #pac-input:focus {
+    border-color: #4d90fe;
+  }
+
+  #title {
+    color: #fff;
+    background-color: #1f3161;
+    font-size: 4.5vh;
+    font-weight: 400;
+    padding: 1vh 2vw 1vh 2vw;
+  }
+  .hidden {
+    display: none;
+  }
+}
