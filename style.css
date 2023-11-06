@@ -8,6 +8,26 @@
     bottom: 0px;
   }
 
+	a:link {
+	text-decoration: none;
+	color: #000000;
+	}
+	
+	a:visited {
+	text-decoration: none;
+	color: #000000;
+	}
+	
+	a:hover {
+	text-decoration: underline;
+	color: #000000;
+	}
+	
+	a:active {
+	text-decoration: underline;
+	color: #000000;
+	}
+
   h2 {
     line-height: 0vh;
     font-size: 2vh;
