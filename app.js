@@ -234,7 +234,11 @@ function initMap() {
 	const title = document.createElement('div');
 	const container = document.createElement('div');
 	const input = document.createElement('input');
+	const northEast = new google.maps.LatLng(32.513868, -110.446228);
+    const southWest = new google.maps.LatLng(31.501802, -113.314058);
+	const PimaBounds = new google.maps.LatLngBounds(southWest, northEast);
 	const options = {
+		bounds: PimaBounds,
 		types: ['address'],
 		componentRestrictions: {
 			country: 'us'
