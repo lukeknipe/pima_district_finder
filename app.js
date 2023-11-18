@@ -212,6 +212,9 @@ function initMap() {
 	// Load voting precincts onto map
 	map.data.loadGeoJson('precincts.json', {});
 
+	// Load voting precincts onto map
+	map.data.loadGeoJson('justice_precincts.json', {});
+
 	// Hide districts on map
 	map.data.setStyle({
 		fillColor: "none",
@@ -300,6 +303,7 @@ function initMap() {
 		leg_dist = [];
 		incorp = [];
 		sch_dist = [];
+		justice_precinct = [];
 
 		map.data.forEach(function (feature) {
 
@@ -512,6 +516,37 @@ function initMap() {
 
 				}
 			}
+
+			// Find Justice Precinct
+			if (feature.getGeometry().getType() === 'MultiPolygon' && feature.getProperty("TYPE") == 'justice_precinct') {
+				var array = feature.getGeometry().getArray();
+				array.forEach(function (item, i) {
+
+					var coords = item.getAt(0).getArray();
+					var multiPoly = new google.maps.Polygon({
+						paths: coords
+					});
+					var isInside = google.maps.geometry.poly.containsLocation(originLocation, multiPoly);
+
+					if (isInside) {
+						ward = feature.getProperty("JP_DIST");
+					}
+
+				});
+			} else if (feature.getGeometry().getType() === 'Polygon' && feature.getProperty("TYPE") == 'justice_precinct') {
+				var polyPath = feature.getGeometry().getAt(0).getArray();
+
+				var poly = new google.maps.Polygon({
+					paths: polyPath
+				});
+				var isInsidePoly = google.maps.geometry.poly.containsLocation(originLocation, poly);
+
+				if (isInsidePoly) {
+					ward = feature.getProperty("JP_DIST");
+
+				}
+			}
+
 
 		});
 
