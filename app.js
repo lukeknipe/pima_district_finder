@@ -266,7 +266,7 @@ function initMap() {
 	// Set marker when the user selects an address
 	const originMarker = new google.maps.Marker({
 		map: map,
-		icon: "./img/locator.png",
+		icon: "./locator.png",
 	});
 
 	originMarker.setVisible(false);
