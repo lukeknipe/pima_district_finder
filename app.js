@@ -212,7 +212,7 @@ function initMap() {
 	// Load voting precincts onto map
 	map.data.loadGeoJson('precincts.json', {});
 
-	// Load voting precincts onto map
+	// Load justice precincts onto map
 	map.data.loadGeoJson('justice_precincts.json', {});
 
 	// Hide districts on map
@@ -616,7 +616,7 @@ function initMap() {
 			<a href="#" onclick="wardLite('${ward}')">${tucsonWard}</a>
       		<a href="#" onclick="incorpLite('${incorp}')">${otherIncorp}</a>
 			<a href="#" onclick="schLite('${sch_dist}')">${schDist}</a>
-			<a href="#" onclick="schLite('${justice_precinct}')">${justicePrecinct}</a>
+			<a href="#" onclick="justLite('${justice_precinct}')">${justicePrecinct}</a>
 			</div>
 			`;
 
