@@ -593,6 +593,12 @@ function initMap() {
 			schDist = []
 		}
 
+		if (justice_precinct) {
+			votingPrecinct = `<p><b>Your precinct: </b>${justice_precinct}<br>`;
+		} else {
+			justicePrecinct = []
+		}
+
 		if (precinct) {
 			votingPrecinct = `<p><b>Your precinct: </b>${precinct}<br>`;
 		} else {
@@ -605,11 +611,12 @@ function initMap() {
 			${votingPrecinct}
 			${countyCheck}
 			<a href="#" onclick="congLite('${cong_dist}')">${congDist}</a>
-      <a href="#" onclick="legLite('${leg_dist}')">${legDist}</a>
+     		<a href="#" onclick="legLite('${leg_dist}')">${legDist}</a>
 			<a href="#" onclick="supLite('${sup_dist}')">${pimaSup}</a>
 			<a href="#" onclick="wardLite('${ward}')">${tucsonWard}</a>
-      <a href="#" onclick="incorpLite('${incorp}')">${otherIncorp}</a>
+      		<a href="#" onclick="incorpLite('${incorp}')">${otherIncorp}</a>
 			<a href="#" onclick="schLite('${sch_dist}')">${schDist}</a>
+			<a href="#" onclick="schLite('${justice_precinct}')">${justicePrecinct}</a>
 			</div>
 			`;
 
