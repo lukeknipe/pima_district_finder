@@ -529,7 +529,7 @@ function initMap() {
 					var isInside = google.maps.geometry.poly.containsLocation(originLocation, multiPoly);
 
 					if (isInside) {
-						ward = feature.getProperty("JP_DIST");
+						justice_precinct = feature.getProperty("JP_DIST");
 					}
 
 				});
@@ -542,7 +542,7 @@ function initMap() {
 				var isInsidePoly = google.maps.geometry.poly.containsLocation(originLocation, poly);
 
 				if (isInsidePoly) {
-					ward = feature.getProperty("JP_DIST");
+					justice_precinct = feature.getProperty("JP_DIST");
 
 				}
 			}
