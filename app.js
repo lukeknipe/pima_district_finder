@@ -593,7 +593,7 @@ function initMap() {
 			schDist = []
 		}
 
-		if (justice_precinct) {
+		if (justice_precinct > 0 && justice_precinct < 11) {
 			justicePrecinct = `Justice Precinct ${justice_precinct}<br>`;
 		} else {
 			justicePrecinct = []
@@ -722,3 +722,15 @@ function schLite(sch_dist) {
 	map.setZoom(12);
 
 }
+
+function justLite(justice_precinct) {
+
+	map.data.revertStyle();
+	  map.data.forEach(function (feature) {
+		  if (feature.getProperty("JP_DIST") == justice_precinct) {
+			  map.data.overrideStyle(feature, { strokeOpacity: 1, strokeWeight: 6 });
+		  }
+	  });
+	  map.setZoom(12);
+  
+  }
