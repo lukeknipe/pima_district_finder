@@ -594,7 +594,7 @@ function initMap() {
 		}
 
 		if (justice_precinct) {
-			votingPrecinct = `<p><b>Your precinct: </b>${justice_precinct}<br>`;
+			justicePrecinct = `Justice Precinct ${justice_precinct}<br>`;
 		} else {
 			justicePrecinct = []
 		}
