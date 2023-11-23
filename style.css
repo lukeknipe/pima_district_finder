@@ -202,6 +202,9 @@
   .hidden {
     display: none;
   }
+  .header {
+	display: none
+  }
 }
 /* CSS for mobile devices in landscape view ------------------------------- */
 @media only screen and (max-width: 750px) and (orientation: landscape) {
@@ -270,6 +273,7 @@
     font-weight: 400;
     padding: 1vh 2vw 1vh 2vw;
   }
+	
   .hidden {
     display: none;
   }
